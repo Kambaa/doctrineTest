@@ -1,0 +1,20 @@
+{
+  "name": "Kambaa/doctrineTest",
+  "description": "Doctrine Learning Examples",
+  "minimum-stability": "dev",
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "Yusuf Gündüz",
+      "email": "yusuf.gunduz@gmail.com"
+    }
+  ],
+  "require": {
+    "doctrine/orm": "^2.5.5"
+  },
+  "autoload": {
+    "psr-4": {
+      "DoctrineTest\\": "src\\main\\php\\"
+    }
+  }
+}
