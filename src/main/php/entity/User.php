@@ -57,5 +57,8 @@ class User
         $this->name = $name;
     }
 
-
+    function __toString()
+    {
+        return User::class . " [id=$this->id,name=$this->name]";
+    }
 }
