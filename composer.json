@@ -16,5 +16,10 @@
     "psr-4": {
       "DoctrineTest\\": "src\\main\\php\\"
     }
-  }
+  },
+  "http-basic": {
+        "git.faster.click": {
+            "username": "Kambaa",
+            "password": "Yg1234565"
+        },
 }
