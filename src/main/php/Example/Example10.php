@@ -36,7 +36,7 @@ class Example10
         //{
         //...
         //}
-        // check out the example below the page.
+        // check out the DoctrineTest\Util\CustomRepository class.
 
         // and then add repositoryClass="ClassName" attribute to the entity annotation of class header.
         // /**
