@@ -8,6 +8,10 @@
 
 namespace DoctrineTest\Example;
 
+use Doctrine\ORM\EntityRepository;
+use DoctrineTest\entity\User;
+use DoctrineTest\Util\DoctrineEntityManagerCreatorFactory;
+
 
 /**
  * Class Example10
@@ -25,12 +29,14 @@ class Example10
         // Doctrine offers you a convenient way to extend the functionalities of the default EntityRepository
         // and put all the specialized DQL query logic on it. For this you have to create a subclass of
         // Doctrine\ORM\EntityRepository
+        // http://docs.doctrine-project.org/projects/doctrine-orm/en/latest/reference/working-with-objects.html#custom-repositories
 
         // to do that just create the custom repo class.
-        //class UserRepository extends EntityRepository
+        //class CustomEntityRepository extends EntityRepository
         //{
         //...
         //}
+        // check out the example below the page.
 
         // and then add repositoryClass="ClassName" attribute to the entity annotation of class header.
         // /**
@@ -41,7 +47,11 @@ class Example10
         // {
         // ...
         // }
+        // check out the \DoctrineTest\entity\User entity class for the working example.
 
+        $entityManager = DoctrineEntityManagerCreatorFactory::getEntityManager();
+        $kambaas = $entityManager->getRepository(User::class)->getKambaas();
+        var_dump($kambaas);
     }
 
     public static function run()
@@ -63,4 +73,3 @@ class Example10
 }
 
 Example10::run();
-

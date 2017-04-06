@@ -11,7 +11,7 @@ namespace DoctrineTest\entity;
 
 /**
  * Class User
- * @Entity
+ * @Entity(repositoryClass="DoctrineTest\Util\CustomRepository")
  * @Table(name="users")
  *
  * Please note that id has no setter beacuse generally speaking, your code should not set this value since
